@@ -10,5 +10,5 @@ class Employee
         this.position = position;
     }
 }
-exports.Employee = Employee;
+export default Employee;
 

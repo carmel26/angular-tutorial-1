@@ -1,4 +1,6 @@
 import { Component } from "@angular/core";
+import Employee from "../../utils/Employee";
+
 
 @Component({
   selector: "app-employee-detail",

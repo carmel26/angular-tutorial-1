@@ -23,7 +23,7 @@ import { Component } from "@angular/core";
     `,
   standalone : true,
 })
-export class EmployeeCreateComponent {
+export class CreateEmployeeComponent {
   constructor() {}
   onSubmit() {
     console.log("Form submitted Thanks");
