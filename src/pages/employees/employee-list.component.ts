@@ -21,6 +21,7 @@ import { EmployeeService } from "../../services/employee.service";
                   </tr>
                 </tbody>
               </table>
+              <ng-container  *ngComponentOutlet="confirmDialog"></ng-container>
   `,
   standalone : true,
   imports : [AsyncPipe, NgFor, NgIf, NgComponentOutlet],
