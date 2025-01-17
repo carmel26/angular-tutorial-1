@@ -24,7 +24,7 @@ import { EmployeeService } from "../../services/employee.service";
               <ng-container  *ngComponentOutlet="confirmDialog"></ng-container>
   `,
   standalone : true,
-  imports : [AsyncPipe, NgFor, NgIf, NgComponentOutlet],
+  imports : [AsyncPipe, NgFor, NgComponentOutlet],
 })
 export class EmployeeListComponent {
   employees$;
