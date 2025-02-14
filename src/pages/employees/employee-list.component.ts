@@ -1,5 +1,5 @@
 import { AsyncPipe, NgComponentOutlet, NgFor, NgIf } from "@angular/common";
-import { Component } from "@angular/core";
+import { Component, inject } from "@angular/core";
 import { EmployeeService } from "../../services/employee.service";
 
 @Component({
@@ -28,13 +28,11 @@ import { EmployeeService } from "../../services/employee.service";
   imports : [AsyncPipe, NgFor, NgIf, NgComponentOutlet],
 })
 export class EmployeeListComponent {
-  employees$;
+  employeeService = inject(EmployeeService);
+  employees$ = this.employeeService.getEmployees();
   isConfirmationOpen = false;
   confirmDialog: any = null;
 
-  constructor(private readonly employeeService: EmployeeService){
-    this.employees$ = this.employeeService.getEmployees();
-  }
 
   async showConfirmationDialog(){
     this.confirmDialog = await import(
