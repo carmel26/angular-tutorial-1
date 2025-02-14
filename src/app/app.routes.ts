@@ -9,7 +9,8 @@ export const routes: Routes = [
       (m) => m.RegistrationComponent
     );
   }},
-  {path: 'employees',
+  {
+    path: 'employees',
     providers: [EmployeeService],
     loadChildren: () => {
     return import('../pages/employees/employees.routes').then(

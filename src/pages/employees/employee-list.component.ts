@@ -10,7 +10,7 @@ import { EmployeeService } from "../../services/employee.service";
                   <tr>
                     <th>Full Name</th>
                     <th>Position</th>
-                    <th>Action</th>
+                    <th>Actions</th>
                   </tr>
                 </thead>
                 <tbody>
@@ -21,10 +21,11 @@ import { EmployeeService } from "../../services/employee.service";
                   </tr>
                 </tbody>
               </table>
-              <ng-container  *ngComponentOutlet="confirmDialog"></ng-container>
+              <<ng-container *ngComponentOutlet="confirmDialog"></ng-container>
+
   `,
   standalone : true,
-  imports : [AsyncPipe, NgFor, NgComponentOutlet],
+  imports : [AsyncPipe, NgFor, NgIf, NgComponentOutlet],
 })
 export class EmployeeListComponent {
   employees$;
