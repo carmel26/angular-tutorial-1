@@ -3,7 +3,6 @@ import { RouterLink } from "@angular/router";
 import { isAuth } from "../auth";
 import { Component } from "@angular/core";
 
-
 @Component({
   selector: 'app-footer',
   template: `
